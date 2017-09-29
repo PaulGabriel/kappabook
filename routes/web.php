@@ -142,12 +142,6 @@ Route::group(['prefix' => 'user'], function(){
             'as' => 'review.create'
         ]);
 
-        Route::post('checkoutbook',[
-            'uses' => 'CheckoutController@postCreateCheckout',
-            'as' => 'checkout.create'
-        ]);
-        
-
     });
     
     
