@@ -454,3 +454,8 @@ background: #333333;
   box-shadow: none;
   outline: 0;
 }
+
+
+.text-strong{
+    font-weight: bold;
+}

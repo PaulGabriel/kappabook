@@ -131,6 +131,17 @@ Route::group(['prefix' => 'user'], function(){
             'uses' => 'UserController@getProfile',
             'as' => 'user.profile'
         ]);
+
+        Route::get('profile/modify',[
+            'uses' => 'UserController@modify',
+            'as' => 'modify-profile'
+        ]);
+
+        Route::post('profile/modify',[
+            'uses' => 'UserController@update',
+            'as' => 'user.update'
+        ]);
+
         
         Route::get('logout',[
             'uses' => 'UserController@getLogout',
@@ -141,7 +152,8 @@ Route::group(['prefix' => 'user'], function(){
             'uses' => 'ReviewController@postCreateReview',
             'as' => 'review.create'
         ]);
-
+        
+     
     });
     
     

@@ -5,10 +5,44 @@
 @endsection
 
 @section('content')
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-        <h1>Hello, {{ Auth::user()->firstname }}, {{ Auth::user()->id}} </h1>
-       
+   
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+        <div class="panel-heading text-center"><h4>My Account</h4></div>
+        <div class="panel-body">
+
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="panel panel-success">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Account informations</div>
+                    <div class="panel-body">
+                    <p class="pull-left">Mr or Ms </p>
+                        <p class="text-center text-strong">{{ Auth::user()->sex }}</p>
+                    <p class="pull-left">Firstname: </p>
+                        <p class="text-center text-strong">{{ Auth::user()->firstname }}</p>
+                    <p class="pull-left">Lastname: </p>
+                        <p class="text-center text-strong">{{ Auth::user()->lastname }}</p>
+                    <p class="pull-left">E-mail </p>
+                        <p class="text-center text-strong">{{ Auth::user()->email }}</p>
+                    <p class="pull-left">Phone</p>
+                        <p class="text-center text-strong">{{ Auth::user()->phone}}</p>
+                    <p class="pull-left">Adress</p>
+                        <p class="text-center text-strong">{{ Auth::user()->adress }}</p>
+            <br>
+            <a href="{{ route('modify-profile') }}"><button type="button" class="btn btn-success pull-right">Modify</button></a>
+                </div>
             </div>
+        </div>
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="panel panel-success">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">My orders</div>
+                    <div class="panel-body">
+                
+            <button type="button" class="btn btn-success pull-right">All orders</button>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

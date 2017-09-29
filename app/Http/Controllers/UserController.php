@@ -71,4 +71,29 @@ class UserController extends Controller
       
         return redirect()->route('product.index');
     }
+
+    public function modify(){
+
+        return view('user.profile-modify');
+    }
+
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+
+        
+        $user->sex = empty($request->input('sex')) ? $user->sex : $request->input('sex');
+       $user->firstname = empty($request->input('firstname')) ? $user->firstname : $request->input('firstname');
+       $user->lastname = empty($request->input('lastname')) ? $user->lastname : $request->input('lastname');
+       $user->email = empty($request->input('email')) ? $user->email : $request->input('email');
+       $user->phone = empty($request->input('phone')) ? $user->phone : $request->input('phone');
+       $user->adress = empty($request->input('adress')) ? $user->adress: $request->input('adress');
+       $user->password = empty($request->input('password')) ? $user->password : bcrypt($request->input('password'));
+       
+
+
+    $user->save();
+       
+        return redirect()->route('user.profile');
+    }
 }
