@@ -45,4 +45,30 @@
             </div>
         </div>
     </div>
+</div>
+
+<br><br><br><br>
+    <div class="col-md-6">  
+        <div class="side-menu">
+            <ul class="nav">
+                <p style="background-color: blue;">My account</p>
+                <li>My orders</li>
+                <li>Tranzactions</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6"> 
+         <p class="pull-left">Mr or Ms </p>
+                        <p class="text-center text-strong">{{ Auth::user()->sex }}</p>
+                    <p class="pull-left">Firstname: </p>
+                        <p class="text-center text-strong">{{ Auth::user()->firstname }}</p>
+                    <p class="pull-left">Lastname: </p>
+                        <p class="text-center text-strong">{{ Auth::user()->lastname }}</p>
+                    <p class="pull-left">E-mail </p>
+                        <p class="text-center text-strong">{{ Auth::user()->email }}</p>
+                    <p class="pull-left">Phone</p>
+                        <p class="text-center text-strong">{{ Auth::user()->phone}}</p>
+                    <p class="pull-left">Adress</p>
+                        <p class="text-center text-strong">{{ Auth::user()->adress }}</p>
+    </div>
 @endsection

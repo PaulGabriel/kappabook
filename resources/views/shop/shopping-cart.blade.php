@@ -25,7 +25,7 @@
 						<div class="col-xs-2"> <img width="70" height="90" src="{{ $product['item']['imagePath'] }} ">
 						</div>
 						<div class="col-xs-4">
-						<input type="hidden" name="title" id="title" value=" <a href="{{ route('shop.product', ['id' => $product['item']['id'] ]) }}"><h4 class="product-name"><strong>{{ $product['item']['title']}}</strong></h4></a>">
+						<a href="{{ route('shop.product', ['id' => $product['item']['id'] ]) }}"><h4 class="product-name"><strong>{{ $product['item']['title']}}</strong></h4></a>
                            
                         </input>
                             <h4><small>{{ $product['item']['category']}}</small></h4>
@@ -71,7 +71,7 @@
 							<h4 class="text-right">Total: <strong>{{ $total }}€</strong></h4>
 						</div>
                         	<div class="col-xs-2 ">
-                            <a href="{{ route('checkout.create') }}">
+                            <a href="{{ route('checkout') }}">
 							<button type="button" class="btn btn-success btn-block">
 								Checkout
 							</button>
