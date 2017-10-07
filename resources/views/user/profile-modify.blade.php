@@ -6,19 +6,56 @@
 
 @section('content')
    
-    <div class="col-lg-12">
-        <div class="panel panel-default">
-          <!-- Default panel contents -->
-        <div class="panel-heading text-center"><h4>My Account</h4></div>
-        <div class="panel-body">
 
-            <div class="col-lg-8 col-lg-offset-2">
-                <div class="panel panel-success">
-                    <!-- Default panel contents -->
-                    <div class="panel-heading">Account informations</div>
-                    <div class="panel-body">
-                    
-        <form action="{{ route('user.update') }}" method="post">
+      <div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="https://www.kirkleescollege.ac.uk/wp-content/uploads/2015/09/default-avatar.png" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{ Auth::user()->firstname }} {{ Auth::user()->lastname}}
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li >
+							<a href="{{ route('user.profile') }}">
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+						<li class="active">
+							<a href="{{ route('user.update') }}">
+							<i class="glyphicon glyphicon-user"></i>
+							Account Settings </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-ok"></i>
+							Orders</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+                
+			    <form action="{{ route('user.update') }}" method="post">
              <div class="checkbox">
                 <input type="radio" name="sex" id="sex" value="Mr"> Mr.</input>
                 <label>
@@ -43,16 +80,14 @@
                 <div class="form-group">
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password">
                 </div>
-
-              <button type="submit" class="btn btn-success pull-right">Modify</button>
+          <br>
+              <button type="submit" class="btn btn-default pull-right">Confirm</button>
                {{ csrf_field() }}
          </form>
-              <a href="{{ route('user.profile') }}"><button type="submit" class="btn btn-success pull-left">Back</button>
-            <br>
-          
-                </div>
-            </div>
-        </div>
-           
-    </div>
+            
+            <div class="clearfix"></div>
+
+		</div>
+	</div>
+</div>
 @endsection
