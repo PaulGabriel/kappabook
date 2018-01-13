@@ -54,20 +54,45 @@
 		</div>
 		<div class="col-md-9">
             <div class="profile-content">
-                
-			    <p class="pull-left">Mr or Ms </p>
-                        <p class="text-center text-strong">{{ Auth::user()->sex }}</p>
+				
+				<!--
+				@foreach($profiles as $profile)
+				<img src="{{ $profile['avatar_url'] }}">
+				@endforeach
+				-->
+				
+                @if(Auth::user()->sex)
+				<p class="pull-left">Mr or Ms </p>
+				@endif
+				@if(Auth::user()->sex)
+						<p class="text-center text-strong">{{ Auth::user()->sex }}</p>
+				@endif
+				@if(Auth::user()->name)
+					<p class="pull-left">Name:</p>
+						<p class="text-center text-strong">{{ Auth::user()->name }}</p>
+				@endif
+				@if(Auth::user()->firstname)
                     <p class="pull-left">Firstname:</p>
-                        <p class="text-center text-strong">{{ Auth::user()->firstname }}</p>
+						<p class="text-center text-strong">{{ Auth::user()->firstname }}</p>
+				@endif
+				@if(Auth::user()->lastname)
                     <p class="pull-left">Lastname:</p>
-                        <p class="text-center text-strong">{{ Auth::user()->lastname }}</p>
+						<p class="text-center text-strong">{{ Auth::user()->lastname }}</p>
+				@endif
+				@if(Auth::user()->email)
                     <p class="pull-left">E-mail:</p>
-                        <p class="text-center text-strong">{{ Auth::user()->email }}</p>
+						<p class="text-center text-strong">{{ Auth::user()->email }}</p>
+				@endif
+				@if(Auth::user()->phone)
                     <p class="pull-left">Phone:</p>
-                        <p class="text-center text-strong">{{ Auth::user()->phone}}</p>
+						<p class="text-center text-strong">{{ Auth::user()->phone}}</p>
+				@endif
+				@if(Auth::user()->adress)
+			
                     <p class="pull-left">Adress:</p>
                         <p class="text-center text-strong">{{ Auth::user()->adress }}</p>
-        
+				@endif
+
             <a href="{{ route('user.update') }}">
             <button type="button" class="btn btn-default pull-right">Change</button>
                 </a>

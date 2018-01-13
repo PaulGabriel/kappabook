@@ -41,4 +41,10 @@ return [
         'redirect' => 'http://shopping.dev/callback',
     ],
 
+    'facebook' => [
+        'client_id' => '164405800952889',
+        'client_secret' => '90bdbb9e39adc3c7a552e4567397df08',
+        'redirect' => 'http://shopping.dev/callback',
+    ],
+
 ];

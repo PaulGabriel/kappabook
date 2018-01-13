@@ -131,6 +131,10 @@ Route::group(['prefix' => 'user'], function(){
             'uses' => 'UserController@getProfile',
             'as' => 'user.profile'
         ]);
+        Route::get('profile', [
+            'uses' => 'SocialAuthFacebookController@fetch',
+            'as' => 'user.profile'
+        ]);
 
         Route::get('profile/modify',[
             'uses' => 'UserController@modify',
@@ -163,5 +167,8 @@ Auth::routes();
 
 Route::get('/redirect', 'SocialAuthTwitterController@redirect');
 Route::get('/callback', 'SocialAuthTwitterController@callback');
+
+Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+Route::get('/callback', 'SocialAuthFacebookController@callback');
 
 Route::get('/home', 'HomeController@index')->name('home');
