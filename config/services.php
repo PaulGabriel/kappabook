@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'twitter' => [
+        'client_id' => 'kAN9sJSB1SRwMpMN5JueE2Cyz',
+        'client_secret' => '9HJqZn8FjHlCE1kC4FrtcsFn1zNemvj59Qc0RPcf96mRJW6Qjm',
+        'redirect' => 'http://shopping.dev/callback',
+    ],
+
 ];

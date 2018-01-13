@@ -8,8 +8,7 @@
             <h1>Login</h1>
             <p>Manage your account and see your orders</p>
             <br><br>
-            <button type="button" class="btn btn-default btn-md" style="min-width: 365px; background-color: #3b5998; color: white; border:0 ;"><span class="fa fa-facebook"></span>&nbsp; &nbsp;Login with facebook</button>
-                
+           
             <hr>
             
         @if(count($errors)>0)
@@ -20,6 +19,10 @@
             </div>
         @endif
             <form action="{{ route('login') }}" method="post">
+                    <a href="{{url('/redirect')}}">
+                        <button type="button" class="btn btn-default btn-md" style="min-width: 365px; background-color: #3b5998; color: white; border:0 ;"><span class="fa fa-facebook"></span>&nbsp; &nbsp;Login with facebook</button>
+                        </a>
+                        
                 <div class="form-group">   
                         <input type="text" id="email" name="email" class="form-control" placeholder="E-mail *">
                 </div>
