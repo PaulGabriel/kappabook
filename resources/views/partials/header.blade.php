@@ -123,7 +123,7 @@
             <li><a href="{{ route('user.logout') }}">Logout</a></li>
             @else
               <li><a href="{{ route('user.signup') }}">Create a new account</a></li>
-            <li><a href="{{ route('login') }}">Login</a></li>
+            <li><a href="{{ route('user.login') }}">Login</a></li>
           @endif
           </ul>
         </li>

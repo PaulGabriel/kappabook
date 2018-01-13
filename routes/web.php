@@ -59,7 +59,7 @@ Route::group(['prefix' => 'user'], function(){
         
         Route::get('signin', [
             'uses' => 'UserController@getSignin',
-            'as' => 'login'
+            'as' => 'user.login'
         ]);
         
         Route::post('signin', [
