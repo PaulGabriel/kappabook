@@ -85,6 +85,7 @@ class UserController extends Controller
         $user->sex = empty($request->input('sex')) ? $user->sex : $request->input('sex');
        $user->firstname = empty($request->input('firstname')) ? $user->firstname : $request->input('firstname');
        $user->lastname = empty($request->input('lastname')) ? $user->lastname : $request->input('lastname');
+       $user->name = empty($request->input('name')) ? $user->name : $request->input('name');
        $user->email = empty($request->input('email')) ? $user->email : $request->input('email');
        $user->phone = empty($request->input('phone')) ? $user->phone : $request->input('phone');
        $user->adress = empty($request->input('adress')) ? $user->adress: $request->input('adress');

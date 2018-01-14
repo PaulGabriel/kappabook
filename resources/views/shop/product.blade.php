@@ -208,7 +208,7 @@
 
                 <div class="product-review-user-meta">
                     <p class="small">Review adaugat de</p>
-                    <p class="strong"><strong>{{ $review->username }}</strong></p>
+                    <p class="strong"><strong>{{ $review->username}} {{$review->name}}</strong></p>
                     <p class="small">{{ $review->created_at }}</p>
                     <p class="text-success"><i class="fa fa-check-circle font-size-md"></i> Product bought</p>
                 </div>

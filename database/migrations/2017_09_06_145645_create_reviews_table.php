@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+
 class CreateReviewsTable extends Migration
 {
     /**
@@ -21,7 +22,8 @@ class CreateReviewsTable extends Migration
             $table->integer('review');
             $table->string('title');
             $table->integer('product_id');
-            $table->string('username');
+            $table->string('username')->nullable();
+            $table->string('name')->nullable();
         });
     }
 
