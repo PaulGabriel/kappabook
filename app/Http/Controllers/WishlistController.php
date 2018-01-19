@@ -14,6 +14,7 @@ class WishlistController extends Controller
         $product = Product::find($id);
         $oldWish = Session::has('wish') ? Session::get('wish'): null;
         $wish = new Wishlist($oldWish);
+
         $wish->add($product, $product->id);
 
         $request->session()->put('wish', $wish);

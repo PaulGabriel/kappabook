@@ -19,7 +19,7 @@
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                 </ol>
                  
-                <!-- Carousel items
+                <! Carousel items
                 <div class="carousel-inner">
               
                 <div class="item active">
@@ -94,9 +94,7 @@
                 <div class="caption">
                   <div class="pull-right">
                   <br>
-                  
-                     <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="fa fa-plus add" data-toggle="tooltip" data-placement="left" title="ADD TO CART"></a>
-                     
+
                      <a href="{{ route('product.addToWish', ['id' => $product->id]) }}" class="fa fa-heart wish" data-toggle="tooltip" data-placement="left" title="ADD TO WISHLIST"></a>
                     
                   </div>
@@ -161,7 +159,11 @@
                 <div class="price">
                     <p>{{ $product->price }} EUR</p>
                 </div>
-                
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-success "  style="padding-left: 25px; padding-right: 25px;"><span class="glyphicon glyphicon-shopping-cart"></span> &nbsp; Add to Cart</a>
+                </div>
+               
+            
               </div>
             </div>
         </div>
